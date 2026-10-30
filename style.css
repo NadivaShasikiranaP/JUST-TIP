@@ -1,3 +1,13 @@
+:root {
+  --soft-blush: #FFDBDA;
+  --old-rose: #DB7F8E;
+  --pale-slate: #D5C5C8;
+  --cool-steel: #9DA3A4;
+  --taupe-grey: #604D53;
+  --taupe-grey-light: #fce5e5;
+  --old-rose-dark: #a54051;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +16,14 @@
 }
 
 body {
-    background-color: white;
-    color: #000;
+    background-color: var(--pale-slate);
+    color: var(--taupe-grey);
     line-height: 1.6;
 }
 
 header {
-    background: rgb(255, 255, 137);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: rgb(245, 199, 198);
+    box-shadow: 0 2px 5px rgba(164, 17, 17, 0.1);
 }
 
 .navbar {
@@ -29,7 +39,7 @@ header {
 }
 
 .logo span {
-    color: #47c8ff;
+    color: var(--old-rose);
 }
 
 .nav-links {
@@ -45,8 +55,8 @@ header {
 }
 
 .hero {
-    background: #47c8ff;
-    color: white;
+    background: var(--cool-steel);
+    color: var(--soft-blush);
     text-align: center;
     padding: 60px 20px;
 }
@@ -60,8 +70,8 @@ header {
 }
 
 .btn {
-    background: rgb(235, 251, 145);
-    color: #4da3ff;
+    background: rgb(219, 127, 142);
+    color: var(--soft-blush);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 20px;
@@ -86,9 +96,184 @@ header {
 }
 
 .about-card {
-    background: white;
+    background: var(--taupe-grey-light);
     padding: 20px;
-    border: 1px solid #5ab0f6;
+    border: 1px solid var(--old-rose);
     border-radius: 8px;
     width: 250px;
+}
+
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--old-rose);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.wa-float:hover {
+  background-color:  var(--old-rose-dark);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--taupe-grey);
+  color: rgb(223, 23, 23);
+  margin-top: 40px;
+}
+
+.footer a {
+    color: var(--old-rose);
+    text-decoration: none;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.about, .services {
+  padding: 80px 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.service-card {
+  background-color: var(--taupe-grey-light);
+  border: 1px solid var(--old-rose);
+  border-radius: 12px;
+  padding: 30px 20px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 240px;
+  box-shadow: 0 4px 10px  rgba(221, 7, 68, 0.525);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--old-rose);
+  box-shadow: 0 12px 24px rgba(221, 7, 68, 0.525);
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+}
+
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-subtitle {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background-color: var(--taupe-grey-light);
+  border: 1px solid var(--old-rose);
+  border-radius: 12px;
+  padding: 30px 20px;
+  flex: 1;
+  min-width: 220px;
+  max-width: 280px;
+  box-shadow: 0 4px 10px  rgba(221, 7, 68, 0.525);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--old-rose);
+  box-shadow: 0 12px 24px rgba(221, 7, 68, 0.525);
+}
+
+.contact-card h3 {
+  font-size: 20px;
+  margin: 8px 0;
+  color: #222;
+}
+
+.contact-card p {
+  font-size: 14px;
+  color: var(--taupe-grey);
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: var(--old-rose);
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.contact-btn:hover {
+  background-color: var(--old-rose-dark);
+}
+
+.contact-info {
+  font-weight: bold;
+  color: var(--old-rose-dark);
+  font-size: 14px;
 }
